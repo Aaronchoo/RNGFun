@@ -3,6 +3,7 @@ package com.example.android.rngfun;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,6 +16,8 @@ public class HeadsOrTailsFair extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Trying to get rid of the window title
+        this.requestWindowFeature(1);
         setContentView(R.layout.activity_heads_or_tails_fair);
 
         final TextView whichIsIt = (TextView) findViewById(R.id.heaers_or_tails);
