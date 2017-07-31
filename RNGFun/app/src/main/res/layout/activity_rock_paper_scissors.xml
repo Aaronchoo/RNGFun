@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.android.rngfun.RockPaperScissors">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rock, Paper, or Scissors?"
+            android:layout_margin="16dp"
+            android:id="@+id/title_of_game_for_rock_paper_scissors"
+            android:gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/input_rock_paper_or_scissors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:hint="What will you choose??"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/answer_for_ro_pa_sci"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/out_of_three_ropasci"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rockpaperscissors"/>
+
+        <Button
+            android:background="@color/colorForRockPaperScissors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rng_for_ropasci"
+            android:layout_marginBottom="16dp"
+            android:text="Guess!"
+            android:gravity="center"
+            android:textColor="#FFFFFF"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/counter_wins_or_loss_in_RoPaSci"
+            android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+</ScrollView>

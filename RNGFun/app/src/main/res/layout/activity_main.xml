@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.rngfun.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/lines"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hey! Let's have some RNG fun!!!! :D"
+        android:textSize="24sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lines"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:background="@color/colorForHeadsOrTailsButton"
+        style="@style/ButtonForRNG"
+        android:text="Heads Or Tails!"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:id="@+id/heads_or_tails_start"/>
+
+    <Button
+        android:background="@color/colorForRockPaperScissors"
+        style="@style/ButtonForRNG"
+        android:text="Rock, Paper, or Scissors?"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:id="@+id/rock_paper_scissors"/>
+
+    <Button
+        android:background="@color/colorForGivingActualRandomNumber"
+        style="@style/ButtonForRNG"
+        android:text="Let's have actual Random Numbers!?!"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:id="@+id/giving_a_random_number"/>
+
+
+</LinearLayout>
