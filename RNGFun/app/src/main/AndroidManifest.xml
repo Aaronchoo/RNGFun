@@ -18,11 +18,11 @@
         </activity>
         <activity
             android:name=".HeadsOrTailsFair"
-            android:label="Heads or Tails?"></activity>
+            android:label="Heads or Tails?" />
         <activity
             android:name=".RockPaperScissors"
-            android:label="Rock, Paper, or Scissors?!">
-        </activity>
+            android:label="Rock, Paper, or Scissors?!"></activity>
+        <activity android:name=".GiveRandomNumbers"></activity>
     </application>
 
 </manifest>
