@@ -15,9 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rock, Paper, or Scissors?"
-            android:layout_margin="16dp"
-            android:id="@+id/title_of_game_for_rock_paper_scissors"
-            android:gravity="center_horizontal"/>
+            style="@style/TitleText"
+            android:id="@+id/title_of_game_for_rock_paper_scissors"/>
 
         <EditText
             android:id="@+id/input_rock_paper_or_scissors"

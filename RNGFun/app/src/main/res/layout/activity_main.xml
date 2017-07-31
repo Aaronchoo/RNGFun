@@ -31,25 +31,25 @@
         android:background="@color/colorForHeadsOrTailsButton"
         style="@style/ButtonForRNG"
         android:text="Heads Or Tails!"
-        android:textColor="#FFFFFF"
-        android:gravity="center"
         android:id="@+id/heads_or_tails_start"/>
 
     <Button
         android:background="@color/colorForRockPaperScissors"
         style="@style/ButtonForRNG"
         android:text="Rock, Paper, or Scissors?"
-        android:textColor="#FFFFFF"
-        android:gravity="center"
         android:id="@+id/rock_paper_scissors"/>
 
     <Button
         android:background="@color/colorForGivingActualRandomNumber"
         style="@style/ButtonForRNG"
         android:text="Let's have actual Random Numbers!?!"
-        android:textColor="#FFFFFF"
-        android:gravity="center"
         android:id="@+id/giving_a_random_number"/>
+
+    <Button
+        style="@style/ButtonForRNG"
+        android:id="@+id/choosing_names"
+        android:text="Can't decide on a place or name? Let me help!"
+        android:background="@color/colorForGivingARandomName"/>
 
 
 </LinearLayout>

@@ -1,9 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.android.rngfun.GiveRandomNumbers">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TitleText"
+        android:text="Enter Range of numbers and one will be chosen!"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/random_number_smallest_input"
+            android:hint="What is the smallest number?"
+            android:inputType="numberSigned"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TO"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:id="@+id/random_number_largest_input"
+            android:hint="What is the largest number?"
+            android:inputType="numberSigned"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/setRandomNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:onClick="giveRandomNumber"
+        android:background="@color/colorForGivingActualRandomNumber"
+        android:text="GENERATE RANDOM NUMBER"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:textStyle="bold"
+        android:id="@+id/show_the_number"
+        android:textSize="56sp"
+        android:gravity="center"
+        tools:text="testttt"/>
+
+
+</LinearLayout>

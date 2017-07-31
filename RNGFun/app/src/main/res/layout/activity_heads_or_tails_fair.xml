@@ -14,23 +14,15 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center_horizontal"
+            style="@style/TitleText"
             android:text="Heads Or Tails?"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
             android:id="@+id/title_of_rng_game"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:gravity="center_horizontal"
-            android:id="@+id/heaers_or_tails"
-            android:layout_margin="20dp"
-            android:textSize="24sp"
-            android:textStyle="bold"/>
+            style="@style/TitleText"
+            android:id="@+id/heaers_or_tails"/>
 
         <ImageView
             android:layout_width="match_parent"

@@ -22,7 +22,8 @@
         <activity
             android:name=".RockPaperScissors"
             android:label="Rock, Paper, or Scissors?!"></activity>
-        <activity android:name=".GiveRandomNumbers"></activity>
+        <activity android:name=".GiveRandomNumbers"
+            android:label="Giving Actual Random Number!"></activity>
     </application>
 
 </manifest>

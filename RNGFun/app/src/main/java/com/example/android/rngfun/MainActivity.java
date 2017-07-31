@@ -34,5 +34,14 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        Button realRandomNumber = (Button) findViewById(R.id.giving_a_random_number);
+        realRandomNumber.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent startRandomNumber = new Intent(MainActivity.this,GiveRandomNumbers.class);
+                startActivity(startRandomNumber);
+            }
+        });
     }
 }
