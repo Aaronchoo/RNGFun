@@ -21,9 +21,12 @@
             android:label="Heads or Tails?" />
         <activity
             android:name=".RockPaperScissors"
-            android:label="Rock, Paper, or Scissors?!"></activity>
-        <activity android:name=".GiveRandomNumbers"
-            android:label="Giving Actual Random Number!"></activity>
+            android:label="Rock, Paper, or Scissors?!" />
+        <activity
+            android:name=".GiveRandomNumbers"
+            android:label="Giving Actual Random Number!" />
+        <activity android:name=".MathGame"
+            android:label="Math Fun!"></activity>
     </application>
 
 </manifest>

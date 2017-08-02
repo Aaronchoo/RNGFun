@@ -54,7 +54,6 @@ public class GiveRandomNumbers extends AppCompatActivity {
                 //Create the Random nUMBER generator
                 double randomNumber = Math.random();
                 //Create the range of the random number
-                randomNumber = randomNumber*(largest-smallest)+smallest;
                 randomNumber = randomNumber*(largest-smallest+1)+smallest;
                 //Cast the double to be an integer
                 long nice = (long) randomNumber;

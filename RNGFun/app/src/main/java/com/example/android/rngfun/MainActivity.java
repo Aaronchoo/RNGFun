@@ -43,5 +43,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(startRandomNumber);
             }
         });
+
+    }
+    public void StartMathGame(View v){
+
+        Intent startMathGames = new Intent(MainActivity.this,MathGame.class);
+        startActivity(startMathGames);
     }
 }
