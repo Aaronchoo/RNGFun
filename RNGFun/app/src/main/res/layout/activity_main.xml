@@ -60,7 +60,6 @@
             android:id="@+id/math_game_start"
             android:text="Let's play a math game!"
             android:background="@color/colorForMathGame"
-            android:onClick="StartMathGame"
             />
 
     </LinearLayout>

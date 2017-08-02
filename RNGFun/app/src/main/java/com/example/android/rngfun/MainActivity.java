@@ -43,11 +43,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(startRandomNumber);
             }
         });
+        //Unsure why onclick did not work (Must check later)
+        Button startMathGame = (Button) findViewById(R.id.math_game_start);
+        startMathGame.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+            Intent startMathGames = new Intent(MainActivity.this,MathGame.class);
+            startActivity(startMathGames);
+            }
+        });
 
     }
-    public void StartMathGame(View v){
 
-        Intent startMathGames = new Intent(MainActivity.this,MathGame.class);
-        startActivity(startMathGames);
-    }
 }

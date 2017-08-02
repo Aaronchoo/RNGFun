@@ -19,7 +19,7 @@
         android:layout_marginRight="48dp"
         android:textSize="24sp"
         android:background="@drawable/outline_box"
-        android:text="24 x 24 = ?"
+        android:text="1 + 1 = "
         android:gravity="center"
         />
 
