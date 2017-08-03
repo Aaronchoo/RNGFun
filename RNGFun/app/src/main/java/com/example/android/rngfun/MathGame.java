@@ -3,6 +3,7 @@ package com.example.android.rngfun;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,8 +14,35 @@ public class MathGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_game);
     }
-    String answerOfMath = "1 + 1 = 2";
-    int base=7;
+    String answerOfMath = "Random Wordssdsijgij";
+    int howmany=0;
+    int base=16;
+    int currentLevel=0;
+
+    public void getLevel(View view){
+        final TextView mathQuestion= (TextView) findViewById(R.id.math_problem_time);
+        String level = mathQuestion.getText().toString();
+        if(level.length() == 16){
+            Toast toast = Toast.makeText(this, "Enter a level!",Toast.LENGTH_SHORT);
+            toast.show();
+        }
+        else{
+            String actualLevel = level.substring(16,level.length());
+            int numberLevel = Integer.parseInt(actualLevel);
+            if(numberLevel < 1){
+                Toast toast = Toast.makeText(this, "Enter a level!",Toast.LENGTH_SHORT);
+                toast.show();
+            }
+            else{
+                currentLevel = numberLevel;
+                Button start = (Button) findViewById(R.id.submit_level);
+                mathQuestion.setText(newQuestion());
+                base = mathQuestion.getText().length();
+                setTitle("Math Challenge! Level: " + currentLevel);
+                start.setVisibility(View.GONE);
+            }
+        }
+    }
     //Creates a new question each time the problem is sovled
     public String newQuestion(){
         //Creates a random number from  1 -5
@@ -24,8 +52,8 @@ public class MathGame extends AppCompatActivity {
         double firstNumber = Math.random();
         double secondNumber =Math.random();
         if(whichOperations == 1 ||whichOperations ==  2){
-            firstNumber=firstNumber*630+501;
-            secondNumber=secondNumber*500+1;
+            firstNumber=firstNumber*(currentLevel*100)+501;
+            secondNumber=secondNumber*(currentLevel*100)+1;
             int firstNumbers = (int) firstNumber;
             int secondNumbers =(int) secondNumber;
             //1 equals subtraction
@@ -41,8 +69,8 @@ public class MathGame extends AppCompatActivity {
             }
         }
         else if(whichOperations == 3 || whichOperations == 4){
-            firstNumber=firstNumber*15+15;
-            secondNumber=secondNumber*15+2;
+            firstNumber=firstNumber*(currentLevel*10)+15;
+            secondNumber=secondNumber*(currentLevel*10)+2;
             int firstNumbers = (int) firstNumber;
             int secondNumbers =(int) secondNumber;
             int totalNumber = firstNumbers*secondNumbers;
@@ -57,8 +85,8 @@ public class MathGame extends AppCompatActivity {
             }
         }
         else{
-            firstNumber=firstNumber*20+1;
-            secondNumber=secondNumber*2+2;
+            firstNumber=firstNumber*(currentLevel*3)+1;
+            secondNumber=secondNumber*3+2;
             int firstNumbers = (int) firstNumber;
             int secondNumbers =(int) secondNumber;
             int totalNumber=1;
@@ -78,7 +106,14 @@ public class MathGame extends AppCompatActivity {
         word = word + s;
         if(answerOfMath.equals(word)){
             mathQuestion.setText(newQuestion());
+            howmany+=1;
+            if(howmany==25){
+                currentLevel+=1;
+                setTitle("Math Challenge! Level: " + currentLevel);
+                howmany=0;
+            }
             base = mathQuestion.getText().length();
+
         }
         else{
             mathQuestion.setText(word);

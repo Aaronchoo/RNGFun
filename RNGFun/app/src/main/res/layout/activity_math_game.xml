@@ -19,7 +19,7 @@
         android:layout_marginRight="48dp"
         android:textSize="24sp"
         android:background="@drawable/outline_box"
-        android:text="1 + 1 = "
+        android:text="Start at level: "
         android:gravity="center"
         />
 
@@ -110,10 +110,17 @@
             android:layout_margin="8dp"
             android:text="0"
             />
+
         <Button
             style="@style/CalculatorButton"
             android:text="Delete"
             android:onClick="ButtonRemove"
+            />
+        <Button
+            style="@style/CalculatorButton"
+            android:text="Start!"
+            android:onClick="getLevel"
+            android:id="@+id/submit_level"
             />
     </LinearLayout>
 
