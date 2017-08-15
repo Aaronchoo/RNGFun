@@ -18,15 +18,24 @@
         </activity>
         <activity
             android:name=".HeadsOrTailsFair"
-            android:label="Heads or Tails?" />
+            android:label="Heads or Tails?"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".RockPaperScissors"
-            android:label="Rock, Paper, or Scissors?!" />
+            android:label="Rock, Paper, or Scissors?!"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".GiveRandomNumbers"
-            android:label="Giving Actual Random Number!" />
-        <activity android:name=".MathGame"
-            android:label="Math Fun!"></activity>
+            android:label="Giving Actual Random Number!"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MathGame"
+            android:label="Math Fun!"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".NameActivity"
+            android:label="We'll pick for you!!"
+            android:parentActivityName=".MainActivity" ></activity>
+
     </application>
 
 </manifest>
