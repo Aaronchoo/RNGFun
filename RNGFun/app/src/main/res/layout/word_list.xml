@@ -10,25 +10,23 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
             android:gravity="center"
             android:id="@+id/chosen_one"
             android:textColor="#000000"
             android:textSize="52sp"
-            android:padding="5dp"/>
+            android:paddingTop="5dp"
+            android:text=""/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Add the name"
             android:id="@+id/name_iteam"
-            android:inputType="text"
-            android:layout_margin="5dp"/>
+            android:inputType="text"/>
         <EditText
             android:layout_width="match_parent"
             android:inputType="text"
             android:layout_height="wrap_content"
             android:hint="Add some details about it!"
-            android:layout_margin="5dp"
             android:id="@+id/name_details"/>
         <Button
             android:layout_width="match_parent"
