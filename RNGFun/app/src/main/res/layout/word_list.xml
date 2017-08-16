@@ -1,45 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <TextView
+            android:id="@+id/chosen_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:id="@+id/chosen_one"
-            android:textColor="#000000"
-            android:textSize="52sp"
             android:paddingTop="5dp"
-            android:text=""/>
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="52sp" />
+
+        <TextView
+            android:id="@+id/chosen_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
         <EditText
+            android:id="@+id/name_iteam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Add the name"
-            android:id="@+id/name_iteam"
-            android:inputType="text"/>
+            android:inputType="text" />
+
         <EditText
+            android:id="@+id/name_details"
             android:layout_width="match_parent"
-            android:inputType="text"
             android:layout_height="wrap_content"
             android:hint="Add some details about it!"
-            android:id="@+id/name_details"/>
+            android:inputType="text" />
+
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/add_list"
-            android:layout_margin="5dp"
-            android:text="Add to options"/>
-        <Button
-            android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/choose_option"
-            android:text="Decide!"/>
+            android:layout_margin="5dp"
+            android:text="Add to options" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/reset_all"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Reset!!" />
+
+            <Button
+                android:id="@+id/choose_option"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Decide!" />
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -51,5 +82,5 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:drawSelectorOnTop="true"
-        tools:context="com.example.android.miwok.NumbersActivity"/>
+        tools:context="com.example.android.miwok.NumbersActivity" />
 </LinearLayout>

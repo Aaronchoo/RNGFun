@@ -24,18 +24,20 @@ public class NameActivity extends AppCompatActivity {
         ;
         final Button chooseOne = (Button) findViewById(R.id.choose_option);
         final EditText nameChoice = (EditText) findViewById(R.id.name_iteam);
+        final Button resetAll = (Button) findViewById(R.id.reset_all);
         ;
         final EditText detailChoice = (EditText) findViewById(R.id.name_details);
         ;
         final TextView showChoice = (TextView) findViewById(R.id.chosen_one);
+        final TextView showDetail = (TextView) findViewById(R.id.chosen_detail);
         //Create an array list that will hold the list of names and details
         final ArrayList<ListDetails> choices = new ArrayList<>();
         //Sets an onclicklistener taht will react when they add a choice
         addChoices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Check to see if they have actually added info
-                if ((nameChoice.getText().toString().equals("") && detailChoice.getText().toString().equals("")))
+                //Check to see if they have actually added info (The only important one is the name (first input))
+                if ((nameChoice.getText().toString().equals("")))
                     //If not, tell usersto add info
                     Toast.makeText(NameActivity.this, "Add info!", Toast.LENGTH_SHORT).show();
                 else{
@@ -65,10 +67,27 @@ public class NameActivity extends AppCompatActivity {
                     //Cast it to get an integer
                     int randomChoice = (int) random;
                     //Display random choice
-                    showChoice.setText(choices.get(randomChoice).getName() + '\n' + choices.get(randomChoice).getDetails());
+                    showChoice.setText(choices.get(randomChoice).getName());
+                    //Display the detail of it too (Did two different textviews because the details aren't as important
+                    //and show not be as big)
+                    showDetail.setText(choices.get(randomChoice).getDetails());
                 }
                 //If not do nothing!
 
+            }
+        });
+        //If the reset button is clicked
+        resetAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Clear the elements
+                choices.clear();;
+                //Erase the list
+                ListView listChoice = (ListView) findViewById(R.id.list);
+                listChoice.setAdapter(null);
+                //Set the textviews that may have content to show nothing
+                showChoice.setText("");
+                showDetail.setText("");
             }
         });
 
