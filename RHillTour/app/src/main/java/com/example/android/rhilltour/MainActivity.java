@@ -38,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
                     Intent openIntro = new Intent(MainActivity.this,IntroductionFantasy.class);
                     startActivity(openIntro);
                 }
+                else if(i==1){
+                    Intent openWorld = new Intent(MainActivity.this,World.class);
+                    startActivity(openWorld);
+                }
+                else{
+                    Intent openCreatures = new Intent(MainActivity.this,Creature.class);
+                    startActivity(openCreatures);
+                }
             }
         });
     }

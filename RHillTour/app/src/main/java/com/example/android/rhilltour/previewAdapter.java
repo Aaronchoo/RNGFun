@@ -38,6 +38,17 @@ public class previewAdapter extends ArrayAdapter<preview> {
         TextView words = (TextView) listItemView.findViewById(R.id.pre_intro);
         words.setText(currentPreview.getIntro());
 
+        TextView detailOne = (TextView) listItemView.findViewById(R.id.detail_one);
+        TextView detailTwo = (TextView) listItemView.findViewById(R.id.detail_two);
+
+        if(currentPreview.getExtraOne().equals("")){
+            detailOne.setVisibility(View.GONE);
+            detailTwo.setVisibility(View.GONE);
+        }
+        else{
+            detailOne.setText(currentPreview.getExtraOne());
+            detailTwo.setText(currentPreview.getExtraTwo());
+        }
         return listItemView;
 
 

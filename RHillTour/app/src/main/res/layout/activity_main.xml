@@ -9,17 +9,19 @@
     >
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         android:layout_gravity="center"
+        android:textColor="#FFFFFF"
         android:text="Start the story!"
-        android:padding="16dp"/>
-<ListView
-    android:layout_width="match_parent"
-    android:id="@+id/list_objects"
-    android:drawSelectorOnTop="true"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.rhilltour.MainActivity">
+        android:background="@drawable/shadow"/>
 
-</ListView></LinearLayout>
+    <ListView
+        android:id="@+id/list_objects"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="true"
+        tools:context="com.example.android.rhilltour.MainActivity">
+
+    </ListView>
+</LinearLayout>
