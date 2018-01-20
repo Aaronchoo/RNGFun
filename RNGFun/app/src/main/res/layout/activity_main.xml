@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hey! Let's have some RNG fun!!!! :D"
+            android:text="Welcome to RNG FUN!"
             android:textSize="24sp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
@@ -46,19 +46,19 @@
         <Button
             android:background="@color/colorForGivingActualRandomNumber"
             style="@style/ButtonForRNG"
-            android:text="Let's have actual Random Numbers!?!"
+            android:text="Choose Random Number!"
             android:id="@+id/giving_a_random_number"/>
 
         <Button
             style="@style/ButtonForRNG"
             android:id="@+id/choosing_names"
-            android:text="Can't decide on a place or name? Let me help!"
+            android:text="Deciding on food/place location!"
             android:background="@color/colorForGivingARandomName"/>
 
         <Button
             style="@style/ButtonForRNG"
             android:id="@+id/math_game_start"
-            android:text="Let's play a math game!"
+            android:text="Math Game!"
             android:background="@color/colorForMathGame"
             />
 

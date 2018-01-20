@@ -22,7 +22,7 @@ public class RockPaperScissors extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rock_paper_scissors);
 
-        //Note to self: Add animations!!!
+        //Assign associated views to ids
         final EditText userInputRoPaSci = (EditText) findViewById(R.id.input_rock_paper_or_scissors);
         final Button btnRoPaSci = (Button) findViewById(R.id.rng_for_ropasci);
         final TextView answerForRoPaSci = (TextView) findViewById(R.id.answer_for_ro_pa_sci);
@@ -39,13 +39,13 @@ public class RockPaperScissors extends AppCompatActivity {
                 //Make the input into all upper case so it is easier to compare
                 userInput=userInput.toUpperCase();
                 //Set up the rng
-                double test = Math.random();
+                double randomNumber = Math.random();
                 //Set up the rang of the int
-                test = test*3 + 1;
+                randomNumber = randomNumber*3 + 1;
                 //Casting it and getting rid of the decimals
-                int cool = (int) test;
+                int randomCasted = (int) randomNumber;
                 //The value 1 represents the rng choosing paper
-                if(cool == 1){
+                if(randomCasted == 1){
                     //Will save the string of whether the player won or not
                     String answer;
                     //Checks if the user chose scissors as scissors beats rock therefore they win
@@ -72,7 +72,7 @@ public class RockPaperScissors extends AppCompatActivity {
                     rockPaperOrSciPic.setImageResource(R.drawable.paper);
                 }
                 //2 represents the rng choosing scissors
-                else if(cool == 2){
+                else if(randomCasted == 2){
                     //The string will update the information
                     String answer;
                     //Checks if the user inputted rock as rock beats scissors

@@ -32,13 +32,17 @@ public class ListDetailsAdapter extends ArrayAdapter<ListDetails> {
         if(listView == null){
             listView = LayoutInflater.from(getContext()).inflate(R.layout.names_layout,parent,false);
         }
-
+        //Get the current information about the desired list position
         final ListDetails currentDetail = getItem(position);
 
+        //Assign the textview to the name of the possible choice
         TextView name = (TextView) listView.findViewById(R.id.name_part);
+        //Show name
         name.setText(currentDetail.getName());
 
-        TextView detail = (TextView) listView.findViewById(R.id.detail_part);
+        //Assign the textview to the details of the information
+         TextView detail = (TextView) listView.findViewById(R.id.detail_part);
+        //Shows the detail
         detail.setText(currentDetail.getDetails());
 
         return  listView;

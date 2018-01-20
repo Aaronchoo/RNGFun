@@ -32,10 +32,10 @@
             android:name=".MathGame"
             android:label="Math Fun!"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".NameActivity"
-            android:label="We'll pick for you!!"
-            android:parentActivityName=".MainActivity" ></activity>
-
+        <activity
+            android:name=".NameActivity"
+            android:label="We&apos;ll pick for you!!"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

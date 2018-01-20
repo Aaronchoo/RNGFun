@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:scaleType="centerCrop"
-            android:id="@+id/whichisitboy"/>
+            android:id="@+id/decisionOfCoin"/>
 
         <Button
             android:background="@color/colorForHeadsOrTailsButton"
